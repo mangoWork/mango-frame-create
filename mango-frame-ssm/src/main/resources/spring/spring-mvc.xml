@@ -25,15 +25,15 @@
         <aop:include name="controllerAspect"/>
     </aop:aspectj-autoproxy>
 
-    <mvc:resources mapping="/**" location="/"></mvc:resources>
-  <!--  <mvc:resources mapping="**/webjars/**" location="classpath:/META-INF/resources/webjars/">
+    <mvc:resources mapping="**/index.html" location="/index.html"></mvc:resources>
+    <mvc:resources mapping="**/webjars/**" location="classpath:/META-INF/resources/webjars/">
         <mvc:resource-chain resource-cache="false" auto-registration="false">
             <mvc:resolvers>
                 <bean class="org.springframework.web.servlet.resource.WebJarsResourceResolver"></bean>
                 <bean class="org.springframework.web.servlet.resource.PathResourceResolver"></bean>
             </mvc:resolvers>
         </mvc:resource-chain>
-    </mvc:resources>-->
+    </mvc:resources>
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"/>
